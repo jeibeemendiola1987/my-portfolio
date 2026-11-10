@@ -10,6 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Featured project card (FairGuest) */
+    .project-feature{display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.05);border-radius:18px;padding:2rem;margin:0 0 2.5rem}
+    .project-feature .pf-badge{display:inline-block;font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;background:#d99a1e;color:#1a1204;padding:.25rem .7rem;border-radius:99px;margin-bottom:1rem}
+    .project-feature h3{font-family:"Playfair Display",serif;font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.1;margin:0 0 .8rem}
+    .project-feature p{margin:0 0 1rem;line-height:1.6;opacity:.92}
+    .pf-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1.3rem}
+    .pf-tags span{border:1px solid rgba(255,255,255,.32);padding:.2rem .7rem;border-radius:99px;font-family:"DM Mono",monospace;font-size:.72rem}
+    .pf-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+    .pf-btn{display:inline-block;padding:.75rem 1.3rem;border-radius:999px;background:#f4f1eb;color:#16130f;font-weight:600;text-decoration:none}
+    .pf-btn:hover{background:#fff}
+    .pf-note{font-size:.8rem;opacity:.75}
+    .pf-visual{background:linear-gradient(160deg,#e3eee7,#cfe0d5);border-radius:14px;padding:1.4rem;color:#17402f;position:relative;overflow:hidden}
+    .pf-visual:before{content:"";position:absolute;right:-28px;top:-28px;width:120px;height:120px;border-radius:50%;background:#efe3bd}
+    .pf-brand{position:relative;display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.6rem;letter-spacing:-.03em;margin-bottom:1rem}
+    .pf-brand svg{width:42px;height:42px}
+    .pf-card{position:relative;background:#fff;border-radius:12px;padding:1rem;color:#1d2521;box-shadow:0 6px 18px rgba(23,64,47,.15)}
+    .pf-card b{display:block;margin-bottom:.2rem}
+    .pf-card .st{color:#d99a1e}
+    .pf-card small{display:block;color:#5d6a63;margin-top:.4rem}
+    @media (max-width:760px){.project-feature{grid-template-columns:1fr;padding:1.4rem}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -56,7 +78,21 @@
 
     <section class="section wrap" id="audit"><div class="section-head"><span class="number">05 /</span><h2>Data Audit &amp; Reconciliation</h2></div><div class="split-feature"><div><p class="lead">A clear trail from source data to a resolved exception.</p><p>I review records for missing entries, mismatches, unusual amounts, and open items; compare invoices, purchase orders, and receipts; and document exceptions for follow-up. Lookup formulas, conditional checks, structured logs, and summaries make spreadsheet reviews traceable.</p></div><article class="project-callout"><span class="eyebrow">E-COMMERCE FINANCE &amp; PROFITABILITY</span><h3>Revenue, fees &amp; payout checks</h3><p>Fictional data demonstrates orders, discounts, refunds, chargebacks, COGS, fees, ad spend, daily profitability, payout reconciliation, a discrepancy log, monthly P&amp;L, and dashboard.</p><a class="arrow-link" href="https://docs.google.com/spreadsheets/d/1--memP-HfxHVL6HaGNkgTPB3tlVokzBNwpajrdLH6lg/edit" target="_blank" rel="noopener">View sample workbook ↗</a></article></div></section>
 
-    <section class="section section-dark" id="projects"><div class="wrap"><div class="section-head"><span class="number">06 /</span><h2>Selected Projects</h2></div><p class="section-intro">Practical examples built around bookkeeping, finance, inventory, and sales operations.</p><div class="project-list">
+    <section class="section section-dark" id="projects"><div class="wrap"><div class="section-head"><span class="number">06 /</span><h2>Selected Projects</h2></div><p class="section-intro">Practical examples built around bookkeeping, finance, inventory, sales operations, and a hospitality web app prototype.</p><div class="project-list">
+      <article class="project-feature" aria-labelledby="fairguest-title">
+        <div>
+          <span class="pf-badge">★ Featured project · Web app prototype</span>
+          <h3 id="fairguest-title">FairGuest — Hospitality Feedback Platform</h3>
+          <p>A customer-first platform for discovering cafés, restaurants and other hospitality businesses, checking in to a visit, and leaving structured, verified feedback. It separates customer ratings from business replies, evaluator audits and moderation, so no one can buy or hide a score.</p>
+          <p>Planned from a product requirements document and pilot workflow, then built with AI assistance as a working demo with customer, business, evaluator and moderator views.</p>
+          <div class="pf-tags"><span>Product requirements</span><span>Role-based screens</span><span>24-hour response window</span><span>Offline post queue</span><span>Netlify</span></div>
+          <div class="pf-actions"><a class="pf-btn" href="https://fairguest.netlify.app/" target="_blank" rel="noopener">Open live demo ↗</a><span class="pf-note">Sample data only · demo visit PIN 1234</span></div>
+        </div>
+        <div class="pf-visual" aria-hidden="true">
+          <div class="pf-brand"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#17402f"/><path d="M24 10c-5.6 0-9.8 4.3-9.8 9.6 0 6.8 9.8 17.4 9.8 17.4s9.8-10.6 9.8-17.4C33.8 14.3 29.6 10 24 10z" fill="#efe3bd"/><path d="M19.2 19.8l3.6 3.6 6.2-6.6" fill="none" stroke="#17402f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>fairguest</div>
+          <div class="pf-card"><b>Fern &amp; Foundry Café</b><span class="st">★★★★★</span> 4.8<small>Verified guests · Sample data</small></div>
+        </div>
+      </article>
       <article class="project-row"><div class="project-meta">BOOKKEEPING · FICTIONAL COMPANY</div><div><h3>Bookkeeping Portfolio</h3><p>Transaction recording, AP/AR, bank reconciliation, financial statements, cash flow, and month-end review.</p></div><a href="https://docs.google.com/spreadsheets/d/1DsRMk_IYUGZiX1fO9GMEjP8Br6p0ZDp_wckSzggjhrI/edit" target="_blank" rel="noopener">Explore workbook ↗</a></article>
       <article class="project-row"><div class="project-meta">FINANCE · FICTIONAL DATA</div><div><h3>E-commerce Profitability</h3><p>Daily profitability, payout reconciliation, discrepancy investigation, and monthly reporting.</p></div><a href="https://docs.google.com/spreadsheets/d/1--memP-HfxHVL6HaGNkgTPB3tlVokzBNwpajrdLH6lg/edit" target="_blank" rel="noopener">Explore workbook ↗</a></article>
       <article class="project-row"><div class="project-meta">INVENTORY · SAMPLE DATA</div><div><h3>50-item Inventory System</h3><p>Item master, stock inventory, purchase orders, and supplier records for illustrative products.</p></div><a href="https://docs.google.com/spreadsheets/d/1e4AqxKN3DBz2hIaqWQL2k2Y0Um7_OS2HIvCHdKu9vYE/edit" target="_blank" rel="noopener">Explore workbook ↗</a></article>
